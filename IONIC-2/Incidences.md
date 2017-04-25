@@ -25,7 +25,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    ...
+...
 ```
 
 En el cual deberá modificar las líneas ``4``, ``5`` y ``12`` con la versión que descargó anteriormente.
