@@ -37,7 +37,7 @@ Después de esto es recomendable que pruebe si los cambios dieron efecto haciend
 Desafortunadamente la herramienta Ionic mantiene una caché en la que los cambios no se verán reflejados después de ejecutar un ``ionic resources``, por lo que es necesario ejecutar los siguientes comandos situado sobre el proyecto:
 
 ```
-$> ionic platform rm android
+$> ionic platform remove android
 $> ionic platform add android
 $> ionic resources
 ```
