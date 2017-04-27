@@ -1,6 +1,6 @@
 # Ejemplo de uso de forEach()
 
-El método ``forEach()`` ejecuta la función indicada una vez por cada elemento del arreglo.
+La función ``forEach()`` ejecuta la función indicada una vez por cada elemento del arreglo.
 
 ## Parámetros
 
