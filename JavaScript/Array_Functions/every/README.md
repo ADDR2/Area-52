@@ -27,6 +27,8 @@ El rango de elementos procesado por ``every()`` se establece antes de la primera
 
 ## Ejemplo
 
+El siguiente ejemplo prueba si todos los elementos de un arreglo son mayores que ``10``.
+
 ```js
 function esSuficientementeGrande(elemento, indice, arrreglo) {
   return elemento >= 10;
