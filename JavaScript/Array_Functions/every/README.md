@@ -34,3 +34,5 @@ function esSuficientementeGrande(elemento, indice, arrreglo) {
 [12, 5, 8, 130, 44].every(esSuficientementeGrande);   // false
 [12, 54, 18, 130, 44].every(esSuficientementeGrande); // true
 ```
+
+Para más información visita [Every() Doc](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/every).
