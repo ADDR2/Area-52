@@ -1,11 +1,11 @@
 # Ejemplo de uso de map()
 
-La función ``map()`` crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+La función ``map()`` crea un nuevo arreglo con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
 
 ## Parámetros
 
 * <b>callback:</b>
-	Función que producirá un elemento del nuevo array, recibe tres argumentos:
+	Función que producirá un elemento del nuevo arreglo, recibe tres argumentos:
     * <b>valorActual:</b>
 		El elemento actual del arreglo que está siendo procesado.
     * <b>índice:</b>
