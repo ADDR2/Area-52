@@ -6,14 +6,16 @@ La función ``filter()`` crea un nuevo array con todos los elementos que cumplan
 
 * <b>callback:</b>
 	Función que comprueba cada elemento del array para ver si cumple la condición 		(también llamada predicado).  Retorna ``true`` si el elemento la cumple, ``false`` 		en caso contrario. Este callback acepta hasta tres parámetros.
-    * <b>elemento:</b>
-		El elemento en sí que se está visitando.
-    * <b>index:</b>
-		El índice del elemento que se está visitando.
-    * <b>array:</b>
-		El propio array que se está filtrando.
+    * <b>valorActual:</b>
+		El elemento actual del arreglo que está siendo procesado.
+    * <b>índice:</b>
+		El índice del elemento actual del arreglo que está siendo procesado.
+    * <b>arreglo:</b>
+		El arreglo sobre el cual fue llamado ``filter()``
 * <b>thisArg:</b>
-	Opcional. Usa el valor como ``this`` cuando es ejecutado el callback.
+	Opcional. Valor para usar como ``this`` cuando se ejecute callback.
+
+## Descripción
 
 ``filter()`` llama a la función dada callback  para cada elemento del array , y construye un nuevo array con todos los valores para los cuales  callback retorna un valor verdadero. callback es invocada sólo para índices del array que tengan asignado un valor. No es invocada para índices que hayan sido borrados o a los que no se les haya asignado valor alguno. Los elementos del array que no pasen la prueba callback  simplemente se saltan, y no son incluidos en el nuevo array.
 
