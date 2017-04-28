@@ -48,7 +48,7 @@ Recuerde verificar que los recursos que colocó (splash.png o icon.png) deben es
 
 Al crear un proyecto con android studio para poder visualizar las opciones para descragar los SDK's necesarios, se ejecuta el método ``build`` de ``Gradle`` y se generan algunos errores. Entre los errores de primero debe encontrarse un error relacionado con la versión ``4.12`` de ``junit`` y esto se debe a que el proyecto no contiene la dependencia necesaria para utilizar esa versión de ``junit``. De este problema hay dos posibles soluciones, la primera es agregar las siguientes líneas de código el archivo ``build.gradle(Module:app)``:
 
-```java
+```js
 repositories {
 	maven { url 'http://repo1.maven.org/maven2' }
 }
@@ -56,7 +56,7 @@ repositories {
 
 Y el archivo debería quedar parecido al siguiente ejemplo:
 
-```java
+```js
 apply plugin: 'com.android.application'
 
 android {
