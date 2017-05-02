@@ -67,12 +67,17 @@ $> sudo vim profile
 Añadir las siguientes líneas al final del archivo:
 
 ```
+JAVA_HOME=<ruta del java>
 ANDROID_HOME=<ruta de android>/Android/Sdk
 PATH=$PATH:$ANDROID_HOME
 export PATH ANDROID_HOME
+PATH=$PATH:$JAVA_HOME/bin
+export PATH JAVA_HOME
+export PATH="$HOME/Android/tools:$PATH"
+export PATH="$HOME/Android/platform-tools:$PATH"
 ```
 
-Donde ``<ruta de android>`` debe ser reemplazado por la ruta donde se encuentran los SDK's previamente descargados.
+Donde ``<ruta de android>`` debe ser reemplazado por la ruta donde se encuentran los SDK's previamente descargados y ``<ruta del java>`` se debe reemplazar por la ruta donde se encuentra la carpeta raíz del java instalado. Se recomienda instalar la versión ``1.8`` o superior de java.
 
 Luego no olvide ejecutar el siguiente comando para salvar los cambios:
 
@@ -104,9 +109,13 @@ Se recomienda seguir el siguiente tutorial para comenzar a desarrollar [Ionic 2 
 
 ## Ejecución
 
+### Modo serve
+
 Ionic 2 provee diversas formas para ejecutar tu aplicación, la más común de ellas es ``serve``. Esta compila la solución y la ejecuta utilizando tu navegador por defecto, es decir que podrás interactuar con tu aplicación en tu  navegador, sin embargo esta opción no provee servicios para funcionalidades como llamadas http, consultas a BD, manejo de periféricos y/o características propias del dispositivo. Esta opción también provee ``hot reloading`` de manera que no es necesario compilar de nuevo al hacer cambios en el código.
 
-Otra opción es ejecutar en modo debug en el dispositivo, conectando por USB el dispositivo a la PC y ejecutando los siguientes comandos:
+### Modo Debug on Device
+
+Otra opción es ejecutar el modo debug en el dispositivo, conectando por USB el dispositivo a la PC y ejecutando los siguientes comandos:
 
 ```
 $> ionic platform add android
