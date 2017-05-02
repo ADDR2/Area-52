@@ -15,7 +15,7 @@ está disponible para cualquier cambio o inclusión de otros sistemas.
 Ionic 2 requiere de la instalación de las siguientes herramientas:
 
  * [Node.js](https://nodejs.org/es/download/package-manager/)
- * [Cordova](https://www.npmjs.com/package/cordova)
+ * [Cordova](https://cordova.apache.org/)
  * [Ionic](https://www.npmjs.com/package/ionic)
  * [Adroid Studio](https://developer.android.com/studio/index.html?hl=es-419)
 
