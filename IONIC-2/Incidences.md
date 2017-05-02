@@ -124,3 +124,25 @@ Luego debe eliminar la carpeta ``node_modules`` y ejecutar el comando:
 ```sh
 $> npm install
 ```
+
+## [I] Gradle Wrapper
+
+Si obtienen el siguiente error:
+
+```
+Error: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.
+```
+
+Es debido a que no se encuentra la carpeta ``templates/`` dentro de su carpeta de SDK's. Para solucionar esto es necesario copiar la carpeta ``templates/`` de la ruta donde se instaló/descargó Android Studio y pegarla en la ruta ``<ruta del android>/Android/Sdk/tools/`` como se ilustra a continuación:
+
+```
+$> cp -r <ruta de Android Studio>/android-studio/plugins/android/lib/templates <ruta del android>/Android/Sdk/tools/
+```
+
+Donde ``<ruta de Android Studio>`` se debe reemplazar por la ruta donde se instaló/descargó Android Studio y ``<ruta del android>`` debe ser reemplazado por la ruta donde se descargaron los SDK's.
+
+Por último es necesario darle permisos a esta carpeta recíen pegada de la siguiente forma:
+
+```
+$> sudo chmod -R 777 <ruta del android>/Android/Sdk/tools/templates
+```
