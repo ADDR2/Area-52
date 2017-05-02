@@ -35,3 +35,5 @@ $> node <archivo del Back-end>.js
 ```
 
 Donde ``<archivo del Back-end>`` debe reemplazarlo por el nombre del archivo principal del Back-end (ejemplo: ``index.js``).
+
+Para más información visite [Express site](http://expressjs.com/es/).
