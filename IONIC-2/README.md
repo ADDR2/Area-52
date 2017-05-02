@@ -61,7 +61,7 @@ Una vez descargadas las versiones es necesario indicar la dirección de las mism
 
 ```
 $> cd /etc/
-$> vim profile
+$> sudo vim profile
 ```
 
 Añadir las siguientes líneas al final del archivo:
@@ -71,7 +71,18 @@ ANDROID_HOME=<ruta de android>/Android/Sdk
 PATH=$PATH:$ANDROID_HOME
 export PATH ANDROID_HOME
 ```
-Donde ``<ruta de android>`` debe ser reemplazado por la ruta donde se encuentran los SDK's previamente descargados. Se recomienda la lectura del archivo ``Incidences.md`` en caso de errores o incompatibilidades. Para más información visite [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)
+
+Donde ``<ruta de android>`` debe ser reemplazado por la ruta donde se encuentran los SDK's previamente descargados.
+
+Luego no olvide ejecutar el siguiente comando para salvar los cambios:
+
+```
+$> source /etc/profile
+```
+
+Y al ejecutar ``echo ${ANDROID_HOME}`` debería ver la ruta que colocó como variable de entorno.
+
+Se recomienda la lectura del archivo ``Incidences.md`` en caso de errores o incompatibilidades. Para más información visite [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)
 
 Por último para poder hacer uso de la aplicación en un dispositivo en modo debug es necesario crear el archivo ``51-android.rules`` en la ruta ``/etc/udev/rules.d`` y agregar la siguiente línea al archivo:
 
