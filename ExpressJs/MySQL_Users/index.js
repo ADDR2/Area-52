@@ -74,6 +74,98 @@ app.get('/User/listAll', upload.array(), function(req, res) {
   return true;
 });
 
+app.get('/User/:id', upload.array(), function(req, res) {
+  connection.query("SELECT * FROM User WHERE Id = ?", [req.params.id], function(err, rows, fields) {
+    if (err) {
+      console.log(err);
+      return res.send({
+        status: 500,
+        result: 'Error executing query, error: ' + err
+      });
+    } else if (rows.length > 0) {
+      return res.send({
+        status: 200,
+        result: rows
+      });
+    } else {
+      return res.send({
+        status: 203,
+        result: 'No user with that Id'
+      });
+    }
+  });
+  return true;
+});
+
+app.put('/User/:id', upload.array(), function(req, res) {
+  connection.query("UPDATE User SET Name = ?, Last_Name = ? WHERE Id = ?", [req.body.name, req.body.lastname, req.params.id], function(err, rows, fields) {
+    if (err) {
+      console.log(err);
+      return res.send({
+        status: 500,
+        result: 'Error executing query, error: ' + err
+      });
+    } else if (rows.affectedRows) {
+      return res.send({
+        status: 200,
+        result: rows
+      });
+    } else {
+      return res.send({
+        status: 203,
+        result: 'No user with that Id'
+      });
+    }
+  });
+  return true;
+});
+
+app.post('/User', upload.array(), function(req, res) {
+  connection.query("INSERT INTO User (Name, Last_Name) values (?, ?)", [req.body.name, req.body.lastname], function(err, rows, fields) {
+    if (err) {
+      console.log(err);
+      return res.send({
+        status: 500,
+        result: 'Error executing query, error: ' + err
+      });
+    } else if (rows.affectedRows) {
+      return res.send({
+        status: 200,
+        result: rows
+      });
+    } else {
+      return res.send({
+        status: 203,
+        result: 'Unexpected error'
+      });
+    }
+  });
+  return true;
+});
+
+app["delete"]('/User/:id', upload.array(), function(req, res) {
+  connection.query("DELETE FROM User WHERE Id = ?", [req.params.id], function(err, rows, fields) {
+    if (err) {
+      console.log(err);
+      return res.send({
+        status: 500,
+        result: 'Error executing query, error: ' + err
+      });
+    } else if (rows.affectedRows) {
+      return res.send({
+        status: 200,
+        result: rows
+      });
+    } else {
+      return res.send({
+        status: 203,
+        result: 'No user with that Id'
+      });
+    }
+  });
+  return true;
+});
+
 app.listen(3000, function() {
   return console.log('Example app listening on port 3000!');
 });
