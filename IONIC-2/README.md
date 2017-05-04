@@ -132,6 +132,7 @@ Este es una forma de compilar y firmar la solución con un certificado para pode
 Para ello el autor realizó los siguientes pasos situado en la carpeta del proyecto:
 
 ```
+$> ionic platform add android
 $> cordova build --release android
 $> keytool -genkey -v -keystore <nombre del certificado>.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 ```
