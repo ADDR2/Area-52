@@ -28,3 +28,7 @@ Este ejemplo expone los siguientes servicios:
 * PUT ``/User/:id``: Actualiza los datos del usuario indicado por su ``id`` con los parámetros ``{"name": <string>, "lastname": <string>}`` en el body de la petición.
 * POST ``/User``: Inserta un usuario en la BD con los parámetros ``{"name": <string>, "lastname": <string>}`` en el body de la petición.
 * DELETE ``/User/:id``: Elimina el usuario con el ``id`` ingresado (en caso de no encontrarlo retorna un mensaje de error).
+
+```
+Nota: Este ejemplo contiene código escrito en lenguaje Coffeescript por comodidad del autor. No es necesario tomar en cuenta los archivos con la extensión .coffee.
+```
