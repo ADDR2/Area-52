@@ -30,7 +30,7 @@ Estos comandos se encargarán de crear una aplicación base con todos los archiv
 
 Este ejemplo contiene el código de un sevidor desarrollado en Node para poder poner en práctica la aplicación. Por esta razón es necesario levantar el servidor antes de probar y hacer un cambio en el código de la aplicación.
 
-Ya que este servidor es de uso local, es necesario el conocimiento de la dirección IP de su máquina y colocarla en el archivo ``camera.ts`` que se encuentra en la carpeta ``<ruta del area 52>/Area-52/IONIC-2/Http_StoreImage/src/pages/camera/`` en la línea de código ``53`` como se ilustra a continuación:
+Ya que este servidor es de uso local, es necesario el conocimiento de la dirección IP de su máquina y colocarla en el archivo ``camera.ts`` que se encuentra en la carpeta ``<ruta del area 52>/Area-52/IONIC-2/Http_StoreImage/src/pages/camera/`` en la línea de código ``61`` como se ilustra a continuación:
 
 ```js
 ...
