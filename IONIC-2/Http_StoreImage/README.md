@@ -15,8 +15,8 @@ Nota: Este ejemplo incluye los siguientes componentes:
 Para comenzar el autor ejecutó los siguientes comandos:
 
 ```
-$> ionic start SQLite_Login tutorial --v2
-$> cd SQLite_Login
+$> ionic start Http_StoreImage tutorial --v2
+$> cd Http_StoreImage
 $> ionic platform add android
 $> ionic resources
 $> ionic plugin add cordova-plugin-camera
