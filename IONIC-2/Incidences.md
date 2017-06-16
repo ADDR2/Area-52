@@ -86,7 +86,7 @@ La segunda solución es eliminar ``junit`` y agregarlo de nuevo siguiendo estos 
 * Agregarlo nuevamente
 * Es posible que tenga que escribir manualmente ``junit:junit:4.12`` para volverlo a agregar
 
-## [E] Cómo instalar o actualizar a la última versión estable de Node (LTS)
+## [E] Cómo instalar o actualizar a la última versión estable de Node
 
 Es muy común esta pregunta y a continuación se encuentran los comandos que debe ingresar:
 
